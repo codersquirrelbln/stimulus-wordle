@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stimulus App</title>
+  <link rel="stylesheet" href="/index.4d663569.css">
+  <link rel="icon" href="data:">
+  <style>.input-field {
+  width: 10em;
+  padding: 5px;
+}
+
+</style>
+</head>
+<body>
+  <div data-controller="hello" style="justify-content: center; align-items: center; height: 100vh; display: flex">
+    <h1 data-target="hello.output"></h1>
+    <div class="grid">
+      <div class="row">
+        <input class="input-field" data-action="input->hello#checkGuess" data-target="hello.input" maxlength="5" type="text" required="">
+        <p class="message" data-target="hello.message"></p>
+      </div>
+    </div>
+  </div>
+  <script>const inputField = document.querySelector(".input-field");
+inputField.addEventListener("input", function() {
+    this.value = this.value.replace(/[^A-Za-z]/g, "").substring(0, 5);
+});
+
+</script>
+<script src="/stimulus-wordle.59712999.js"></script></body>
+</html>
