@@ -74,7 +74,7 @@ export default class extends Controller {
     } else {
       document.querySelector(".message").textContent = "Try again!";
     }
-
+    // better display in console.log or similar
     return {
       correctLetters,
       correctPositions
